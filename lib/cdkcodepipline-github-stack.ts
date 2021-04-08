@@ -26,7 +26,7 @@ export class CdkcodepiplineGithubStack extends cdk.Stack {
     const source_action = new codepipeline_actions.GitHubSourceAction({
       actionName: PREFIX + '-sourceaction',
       owner: 'suzukiken',
-      repo: 'codepipeline',
+      repo: 'cdkcodepipeline-github-repo',
       oauthToken: cdk.SecretValue.secretsManager('gitHub-access-token'),
       output: source_output,
       branch: 'main'
